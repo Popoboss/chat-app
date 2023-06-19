@@ -23,7 +23,7 @@ const Start = ({ navigation }) => {
 
             <View style={styles.container}>
                 <View style={styles.subContainer}>
-                    <Text style={styles.title}>Chat App!</Text>
+                    <Text style={styles.title}>The Chat App</Text>
                 </View>
                 <View style={styles.subContainer}>
                     <TextInput
