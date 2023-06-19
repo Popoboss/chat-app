@@ -6,7 +6,9 @@ import {
     TouchableOpacity,
     View,
     ImageBackground,
+    KeyboardAvoidingView
 } from "react-native";
+
 
 const Start = ({ navigation }) => {
     const [text, setText] = useState("");
@@ -14,13 +16,14 @@ const Start = ({ navigation }) => {
 
     return (
         <ImageBackground
-            source={require("../assets/BackgroundImage.png")} //ask Jay if I can use my own backgrund img :)
+            source={require("../assets/BackgroundImage.png")}
             resizeMode='cover'
             style={styles.backgroundImage}
         >
+
             <View style={styles.container}>
                 <View style={styles.subContainer}>
-                    <Text style={styles.title}>The Chat App</Text>
+                    <Text style={styles.title}>Chat App!</Text>
                 </View>
                 <View style={styles.subContainer}>
                     <TextInput
@@ -28,23 +31,23 @@ const Start = ({ navigation }) => {
                         style={styles.input}
                         onChangeText={setText}
                     />
-                    <Text>Choose Background Color</Text>
+                    <Text style={styles.chooseBackgroundColor}>Choose Background Color</Text>
                     <View style={styles.radioButtonContainer}>
                         <TouchableOpacity
-                            style={[styles.radioButton, { backgroundColor: "#5E35B1" }]}
-                            onPress={() => setColor("#5E35B1")}
+                            style={[styles.radioButton, { backgroundColor: "#ff5e5e" }]}
+                            onPress={() => setColor("#ff5e5e")}
                         ></TouchableOpacity>
                         <TouchableOpacity
-                            style={[styles.radioButton, { backgroundColor: "#18FFFF" }]}
-                            onPress={() => setColor("#18FFFF")}
+                            style={[styles.radioButton, { backgroundColor: "#69cfff" }]}
+                            onPress={() => setColor("#69cfff")}
                         ></TouchableOpacity>
                         <TouchableOpacity
-                            style={[styles.radioButton, { backgroundColor: "#1B5E20" }]}
-                            onPress={() => setColor("#1B5E20")}
+                            style={[styles.radioButton, { backgroundColor: "#54ffd4" }]}
+                            onPress={() => setColor("#54ffd4")}
                         ></TouchableOpacity>
                         <TouchableOpacity
-                            style={[styles.radioButton, { backgroundColor: "#FF5722" }]}
-                            onPress={() => setColor("#FF5722")}
+                            style={[styles.radioButton, { backgroundColor: "#fff869" }]}
+                            onPress={() => setColor("#fff869")}
                         ></TouchableOpacity>
                     </View>
                     <TouchableOpacity
@@ -59,8 +62,15 @@ const Start = ({ navigation }) => {
                         <Text>Go to Chat</Text>
                     </TouchableOpacity>
                 </View>
+
             </View>
+
+            {Platform.OS === "ios" ? (
+                <KeyboardAvoidingView behavior='padding' />
+            ) : null}
+
         </ImageBackground>
+
     );
 };
 
@@ -89,7 +99,7 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: "bold",
         fontSize: 30,
-        color: "black",
+        color: "white",
     },
     button: {
         alignItems: "center",
@@ -101,6 +111,11 @@ const styles = StyleSheet.create({
         width: 30,
         height: 30,
         borderRadius: 15,
+    },
+    chooseBackgroundColor: {
+        fontSize: 16,
+        fontWeight: "bold",
+        color: "white",
     },
     input: {
         height: 40,
