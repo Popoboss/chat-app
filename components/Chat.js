@@ -4,7 +4,7 @@ import { Bubble, GiftedChat } from "react-native-gifted-chat";
 
 
 const Chat = ({ route, navigation }) => {
-    const { name, color } = route.params;
+    const { name } = route.params;
     const [messages, setMessages] = useState([]);
     useEffect(() => {
         navigation.setOptions({ title: name });
