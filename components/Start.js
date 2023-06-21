@@ -52,7 +52,7 @@ const Start = ({ navigation }) => {
                     <Text>Choose Background Color</Text>
                     <View style={styles.radioButtonContainer}>
                         <TouchableOpacity
-                            style={[styles.radioButton, { backgroundColor: "red" }]}
+                            style={[styles.radioButton, { backgroundColor: "purple" }]}
                             onPress={() => setColor("red")}
                         ></TouchableOpacity>
                         <TouchableOpacity
@@ -64,7 +64,7 @@ const Start = ({ navigation }) => {
                             onPress={() => setColor("green")}
                         ></TouchableOpacity>
                         <TouchableOpacity
-                            style={[styles.radioButton, { backgroundColor: "yellow" }]}
+                            style={[styles.radioButton, { backgroundColor: "orange" }]}
                             onPress={() => setColor("yellow")}
                         ></TouchableOpacity>
                     </View>
