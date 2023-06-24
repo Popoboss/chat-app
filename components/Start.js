@@ -7,7 +7,6 @@ import {
     View,
     ImageBackground,
     KeyboardAvoidingView,
-    onAuthStateChanged,
 } from "react-native";
 import { getAuth, signInAnonymously } from "firebase/auth";
 import { Alert } from "react-native";
@@ -52,11 +51,11 @@ const Start = ({ navigation }) => {
                     <Text>Choose Background Color</Text>
                     <View style={styles.radioButtonContainer}>
                         <TouchableOpacity
-                            style={[styles.radioButton, { backgroundColor: "purple" }]}
+                            style={[styles.radioButton, { backgroundColor: "red" }]}
                             onPress={() => setColor("red")}
                         ></TouchableOpacity>
                         <TouchableOpacity
-                            style={[styles.radioButton, { backgroundColor: "blue" }]}
+                            style={[styles.radioButton, { backgroundColor: "purple" }]}
                             onPress={() => setColor("blue")}
                         ></TouchableOpacity>
                         <TouchableOpacity
@@ -64,7 +63,7 @@ const Start = ({ navigation }) => {
                             onPress={() => setColor("green")}
                         ></TouchableOpacity>
                         <TouchableOpacity
-                            style={[styles.radioButton, { backgroundColor: "orange" }]}
+                            style={[styles.radioButton, { backgroundColor: "yellow" }]}
                             onPress={() => setColor("yellow")}
                         ></TouchableOpacity>
                     </View>
